@@ -18,5 +18,8 @@
     <ClCompile Include="Day-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pointertypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

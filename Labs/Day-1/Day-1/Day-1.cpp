@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int main1()
 {
     // <data type> * pointer_name
     /*
@@ -13,5 +13,6 @@ int main()
     std::cout << ptr<<"\n";
     std::cout << a<< "\n";
     std::cout << *ptr << "\n";
+    return 0;
 }
 

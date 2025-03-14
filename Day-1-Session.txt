@@ -16,5 +16,10 @@ c++vs visual c++
 
 C++ Pointer
 
-
+Asignment-1
 create an array and use pointer to print that.
+
+Dangling Pointer==> When pointing to deallocated memory
+Void  Pointer=> pointing to some data location that doen't have any specific type
+Null Pointer=> ansence of a valid address
+Wild Pointer==> unintialized pointers
