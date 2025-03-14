@@ -133,6 +133,7 @@
     <ClCompile Include="Day-1.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="filehandling.cpp" />
+    <ClCompile Include="filehandling2.cpp" />
     <ClCompile Include="Functorcpp.cpp" />
     <ClCompile Include="Iterators.cpp" />
     <ClCompile Include="pointertypes.cpp" />

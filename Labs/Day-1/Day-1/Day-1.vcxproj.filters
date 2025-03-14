@@ -51,5 +51,8 @@
     <ClCompile Include="filehandling.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="filehandling2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
