@@ -27,5 +27,14 @@
     <ClCompile Include="Problem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StackSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssociateConatiners.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Unordered.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

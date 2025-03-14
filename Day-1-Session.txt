@@ -46,9 +46,20 @@ Assignment==>2
 			-3.Delete Employee
 			-4. List Employee
 			-5. Exit
-	2.Conatiner Adaptors
+	2.Continer Adaptors
+		-Stack=>LIFO
+		-Queue==>FIFO
+		-priority Queue
 	3.Assocoative containers
+		-Sets
+		-Maps
+		-Multisets multiset<int>
+		-MultiMaps multimap<int,string>
 	4.Unordered Assocoative containers
+		-Unordered Sets
+		-Unordered Maps
+		-Unordered Multisets
+		-Unordered MultiMaps
 2.Alogorithms
 3.iteraors
 4.Functors
