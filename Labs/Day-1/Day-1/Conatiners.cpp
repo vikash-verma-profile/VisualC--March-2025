@@ -28,5 +28,22 @@ int main() {
 	for (int num:v3) {
 		std::cout << num << " ";
 	}
+	std::cout << "\n";
+	v1.insert(v1.begin() + 1, 50);
+	for (int num : v1) {
+		std::cout << num << " ";
+	}
+	std::cout << "\n";
+	std::cout << v1.size() << "\n";
+	std::cout << v1.capacity() << "\n";
+	v1.empty();
+	v1.clear();
+	std::cout << v1.size() << "\n";
+	std::cout << v1.capacity() << "\n";;
+	v1.shrink_to_fit();//reduce the capacity to match size
+	std::cout << "after shrinking" << "\n";
+	std::cout << v1.size() << "\n";
+	std::cout << v1.capacity();
+	v1.resize(10, 0);
 	return 0;
 }
