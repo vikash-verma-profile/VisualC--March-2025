@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-int main() {
+int main3() {
 
 	std::vector<int> v1;//empty vector
 	std::vector<int> v2(5);//vector of size 5 with default values 0
