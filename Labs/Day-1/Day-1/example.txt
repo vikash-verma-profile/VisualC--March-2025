@@ -1,0 +1,3 @@
+Hello ,This is a test file
+Writing to a file in c++
+This is an sample appended line

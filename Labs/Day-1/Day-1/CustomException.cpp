@@ -9,7 +9,7 @@ public:
 	}
 };
 
-int main()
+int main11()
 {
 	try{
 		throw MyException();

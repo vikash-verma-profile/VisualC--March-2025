@@ -85,3 +85,8 @@ Assignment==>2
 	
 	
 	Exceptions==>
+	
+	file handling
+		ifstream==for reading files
+		ofstream=> for writing files
+		fstream=> can do both
