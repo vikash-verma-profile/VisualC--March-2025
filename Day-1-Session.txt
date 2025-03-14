@@ -90,3 +90,5 @@ Assignment==>2
 		ifstream==for reading files
 		ofstream=> for writing files
 		fstream=> can do both
+		
+		MFC==> MICROSOFT FOUNDATION CLASS
