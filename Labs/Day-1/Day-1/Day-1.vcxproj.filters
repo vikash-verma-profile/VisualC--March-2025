@@ -36,5 +36,11 @@
     <ClCompile Include="Unordered.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Iterators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Functorcpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

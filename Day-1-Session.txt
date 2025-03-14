@@ -61,5 +61,24 @@ Assignment==>2
 		-Unordered Multisets
 		-Unordered MultiMaps
 2.Alogorithms
+	-manuplative alogs
+		-copy
+		-fill
+		-replace
+		-swap
+	-non-manuplative alogs
+		-max_element
+		-Min_element
+		-count
+		-find
 3.iteraors
+	-input iterators
+	-output iterators
+	-forward iterators
+	-Bidirectional Iterator
+	-Random access iterator
 4.Functors
+	arithmetic functors
+	relational functors
+	logical functors
+	bitwise functors

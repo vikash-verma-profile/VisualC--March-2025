@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Unordered.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|solutionrelative:Day-1\\Unordered.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\AssociateConatiners.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|solutionrelative:Day-1\\AssociateConatiners.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Functorcpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|solutionrelative:Day-1\\Functorcpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Unordered.cpp",
-              "DocumentMoniker": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Unordered.cpp",
-              "RelativeDocumentMoniker": "Day-1\\Unordered.cpp",
-              "ToolTip": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Unordered.cpp",
-              "RelativeToolTip": "Day-1\\Unordered.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
+              "Title": "Functorcpp.cpp",
+              "DocumentMoniker": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Functorcpp.cpp",
+              "RelativeDocumentMoniker": "Day-1\\Functorcpp.cpp",
+              "ToolTip": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Functorcpp.cpp",
+              "RelativeToolTip": "Day-1\\Functorcpp.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-14T09:21:37.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AssociateConatiners.cpp",
-              "DocumentMoniker": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\AssociateConatiners.cpp",
-              "RelativeDocumentMoniker": "Day-1\\AssociateConatiners.cpp",
-              "ToolTip": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\AssociateConatiners.cpp",
-              "RelativeToolTip": "Day-1\\AssociateConatiners.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-14T09:15:51.148Z",
+              "WhenOpened": "2025-03-14T10:00:23.614Z",
               "EditorCaption": ""
             }
           ]
