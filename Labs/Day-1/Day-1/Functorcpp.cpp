@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+int main9()
 {
 	plus<int> add;//functor object
 	minus<int> minus;

@@ -129,7 +129,9 @@
   <ItemGroup>
     <ClCompile Include="AssociateConatiners.cpp" />
     <ClCompile Include="Conatiners.cpp" />
+    <ClCompile Include="CustomException.cpp" />
     <ClCompile Include="Day-1.cpp" />
+    <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="Functorcpp.cpp" />
     <ClCompile Include="Iterators.cpp" />
     <ClCompile Include="pointertypes.cpp" />

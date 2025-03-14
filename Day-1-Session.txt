@@ -82,3 +82,6 @@ Assignment==>2
 	relational functors
 	logical functors
 	bitwise functors
+	
+	
+	Exceptions==>
