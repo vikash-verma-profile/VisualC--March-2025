@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Day-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EA15CD3A-D2EF-46ED-8663-8EB8479FE05C}|Day-1\\Day-1.vcxproj|solutionrelative:Day-1\\Day-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Day-1.cpp",
+              "DocumentMoniker": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Day-1.cpp",
+              "RelativeDocumentMoniker": "Day-1\\Day-1.cpp",
+              "ToolTip": "C:\\Users\\Level Up Solutions 1\\Desktop\\Visualc-Mar-2025\\Labs\\Day-1\\Day-1\\Day-1.cpp",
+              "RelativeToolTip": "Day-1\\Day-1.cpp",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T05:12:35.055Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

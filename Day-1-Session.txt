@@ -1,0 +1,20 @@
+C==> it supports procedural
+C++==> its supporting OOps
+	-Abstraction
+	-Encapsulation
+	-Inheritance
+	-Polymorphism
+		-compile time
+			-Method/function overloading
+			-operator overloading
+		-run time
+			-Overriding
+
+c vs C++
+c++vs visual c++
+
+
+C++ Pointer
+
+
+create an array and use pointer to print that.
