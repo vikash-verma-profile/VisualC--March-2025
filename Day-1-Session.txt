@@ -23,3 +23,18 @@ Dangling Pointer==> When pointing to deallocated memory
 Void  Pointer=> pointing to some data location that doen't have any specific type
 Null Pointer=> ansence of a valid address
 Wild Pointer==> unintialized pointers
+
+STL
+1.Containers
+	1.Sequence Containers
+		-Array
+		-Vector
+		-Deque
+		-List
+		-Forward List
+	2.Conatiner Adaptors
+	3.Assocoative containers
+	4.Unordered Assocoative containers
+2.Alogorithms
+3.iteraors
+4.Functors

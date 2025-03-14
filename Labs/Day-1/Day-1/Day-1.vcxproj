@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Conatiners.cpp" />
     <ClCompile Include="Day-1.cpp" />
     <ClCompile Include="pointertypes.cpp" />
   </ItemGroup>
