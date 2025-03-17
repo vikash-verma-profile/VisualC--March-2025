@@ -1,20 +1,6 @@
-# Advanced C++ Crash Course (Threading and Concurrency)
-
-Contains an advanced syntax reference for C++  
-This time, we'll be going through C++ multithreading and concurrency related stuff!    
+# Advanced C++(Threading and Concurrency)
 
 ------
-
-## Pre-Requisites
-
-**Assumed knowledge (This is a C++ crash course, not a basic coding tutorial)**
-
-- How **variables, loops, conditionals, etc**. work (Basic coding fundamentals will help a lot!)
-- Linux (**Terminal/Console proficiency**) (We're going to need to compile our stuff)
-- Gone through the all preceding parts of the tutorial
-- Some familiarity with threading will help
-
-
 
 ## Table Of Contents <a name="top"></a>
 
