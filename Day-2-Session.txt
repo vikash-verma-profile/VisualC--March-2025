@@ -1,0 +1,13 @@
+THREAD
+
+Process vs THREAD
+
+
+				Process         MultiTasking	             THREAD                    MultiThread
+Memory Space	Separate		Separate For each process    Shared within a p	Shared with a p
+
+Thread creation in c++
+
+1. function pointer
+2. lambda function
+3. functor

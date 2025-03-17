@@ -1,6 +1,6 @@
 #include <windows.h>
 
-LRESULT CALLBACK WindowProc(HWND hwand, UINT nMsg, WPARAM wParm, LPARAM lParam);
+LRESULT CALLBACK WindowProc(HWND hwand, UINT nMsg, WPARAM wParam, LPARAM lParam);
 
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR ipszCmdLine, int nCmdShow)
 {
@@ -14,7 +14,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR ipszC
 
 	RegisterClassEx(&wc);
 
-	HWND hwnd = CreateWindowEx(0, L"EDIT", L"MyEditWindows", WS_OVERLAPPEDWINDOW, 100, 100, 500, 400, NULL, NULL, hInstance, NULL);
+	HWND hwnd = CreateWindowEx(0, L"MyWndClass", L"MyEditWindows", WS_OVERLAPPEDWINDOW, 100, 100, 500, 400, NULL, NULL, hInstance, NULL);
 
 	ShowWindow(hwnd, SW_SHOW);
 	MSG msg = { 0 };
@@ -27,7 +27,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR ipszC
 	return 0;
 }
 
-LRESULT CALLBACK WindowProc(HWND hwnd, UINT nMsg, WPARAM wParm, LPARAM lParam) {
+LRESULT CALLBACK WindowProc(HWND hwnd, UINT nMsg, WPARAM wParam, LPARAM lParam) {
 	switch (nMsg)
 	{
 		case WM_DESTROY:
@@ -43,5 +43,5 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT nMsg, WPARAM wParm, LPARAM lParam) {
 			break;
 		}
 	}
-	return DefWindowProc(hwnd, nMsg, wParm, lParam);
+	return DefWindowProc(hwnd, nMsg, wParam, lParam);
 }
