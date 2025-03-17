@@ -15,7 +15,7 @@ void increment() {
 	}
 }
 
-int  main() {
+int  main2() {
 	thread t1(increment);
 	thread t2(increment);
 

@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Atomic.cpp" />
+    <ClCompile Include="MutexProblem.cpp" />
     <ClCompile Include="Race.cpp" />
+    <ClCompile Include="Recursive.cpp" />
     <ClCompile Include="Threads.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
