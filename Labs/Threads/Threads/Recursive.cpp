@@ -17,7 +17,7 @@ void recursiveFunctionP(int n) {
 	rmtxP.unlock();
 }
 
-int main() {
+int main5() {
 	thread t1(recursiveFunctionP, 5);
 	t1.join();
 	return 0;

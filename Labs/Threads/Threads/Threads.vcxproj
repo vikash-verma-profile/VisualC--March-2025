@@ -132,6 +132,7 @@
     <ClCompile Include="Race.cpp" />
     <ClCompile Include="Recursive.cpp" />
     <ClCompile Include="Threads.cpp" />
+    <ClCompile Include="timedmutex.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
