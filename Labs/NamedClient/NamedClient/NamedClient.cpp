@@ -3,7 +3,7 @@
 #define PIPE_NAME L"\\\\.\\pipe\\MyPipe"
 
 using namespace std;
-int main()
+int main1()
 {
 
 	HANDLE hPipe = CreateFile(PIPE_NAME, GENERIC_WRITE | GENERIC_READ, 0, NULL, OPEN_EXISTING, 0, NULL);

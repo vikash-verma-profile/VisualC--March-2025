@@ -3,7 +3,7 @@
 #define PIPE_NAME L"\\\\.\\pipe\\MyPipe"
 
 using namespace std;
-int main()
+int main1()
 {
    
 	HANDLE hPipe = CreateNamedPipe(PIPE_NAME,PIPE_ACCESS_DUPLEX,PIPE_TYPE_MESSAGE | PIPE_READMODE_MESSAGE | PIPE_WAIT,1,1024,1024,0,NULL);
