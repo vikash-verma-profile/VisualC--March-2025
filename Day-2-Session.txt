@@ -11,3 +11,7 @@ Thread creation in c++
 1. function pointer
 2. lambda function
 3. functor
+
+concurrency and parallelism
+
+

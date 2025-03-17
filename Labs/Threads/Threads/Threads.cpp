@@ -13,7 +13,7 @@ public:
         cout << "Thread using a functor" << endl;
     }
 };
-int main()
+int main1()
 {
     //1. Create using a function pointer
     //create a thread that calles a method
