@@ -2,7 +2,7 @@
 #include <windows.h>
 
 using namespace std;
-int main()
+int main2()
 {
 
 	HANDLE hMapFile = CreateFileMapping(INVALID_HANDLE_VALUE,NULL,PAGE_READWRITE,0,256,L"MySharedMemory");

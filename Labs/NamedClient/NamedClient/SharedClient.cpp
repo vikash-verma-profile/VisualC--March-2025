@@ -1,9 +1,9 @@
 #include <iostream>
 #include <windows.h>
-#define PIPE_NAME L"\\\\.\\pipe\\MyPipe"
+
 
 using namespace std;
-int main()
+int main2()
 {
 
 	HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE,L"MySharedMemory");
