@@ -174,5 +174,5 @@ void CmymessageDlg::OnClickedButton1()
 {
 	UpdateData(TRUE);
 	MessageBox(m_editText,_T("Entered Text"),MB_OK | MB_ICONINFORMATION);
-
+	SetDlgItemText(IDC_EDIT1,_T(""));
 }
