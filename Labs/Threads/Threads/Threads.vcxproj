@@ -131,6 +131,7 @@
     <ClCompile Include="MutexProblem.cpp" />
     <ClCompile Include="Race.cpp" />
     <ClCompile Include="Recursive.cpp" />
+    <ClCompile Include="Shared_mutex.cpp" />
     <ClCompile Include="Threads.cpp" />
     <ClCompile Include="timedmutex.cpp" />
   </ItemGroup>
