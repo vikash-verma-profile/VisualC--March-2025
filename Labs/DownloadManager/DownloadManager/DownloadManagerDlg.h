@@ -33,4 +33,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnClickedStart();
+	afx_msg LRESULT OnUpdateProgress(WPARAM wParam,LPARAM lParam);
+private:
+	CProgressCtrl m_progressBar;
+	CStatic m_progressText;
 };

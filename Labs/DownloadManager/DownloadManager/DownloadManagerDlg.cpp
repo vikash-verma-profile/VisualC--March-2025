@@ -13,7 +13,7 @@
 #define new DEBUG_NEW
 #endif
 
-
+#define WM_UPDATE_PROGRESS (WM_USER+1)
 // CAboutDlg dialog used for App About
 
 class CAboutDlg : public CDialogEx
@@ -50,6 +50,7 @@ END_MESSAGE_MAP()
 // CDownloadManagerDlg dialog
 
 UINT DownloadFileThread(LPVOID pParam) {
+	CDownloadManagerDlg* pDlg = (CDownloadManagerDlg*)pParam;
 	CString* pUrl = (CString*)pParam;
 	int pos = pUrl->ReverseFind('/');
 	CString fileName = pUrl->Mid(pos + 1);
@@ -76,10 +77,15 @@ UINT DownloadFileThread(LPVOID pParam) {
 	}
 
 	char buffer[4096];
-	DWORD bytesRead = 0, bytesWritten = 0;
+	DWORD bytesRead = 0, bytesWritten = 0, totalRead = 0, filesize = 0;
+	DWORD sizelen = sizeof(filesize);
+	HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH, &filesize, &sizelen, NULL);
 
 	while (InternetReadFile(hFile, buffer, sizeof(buffer), &bytesRead) && bytesRead > 0) {
 		WriteFile(hOutputFile, buffer, bytesRead, &bytesWritten, NULL);
+		totalRead += bytesRead;
+		int Progress = (int)((totalRead * 100) / filesize);
+		pDlg->PostMessage(WM_UPDATE_PROGRESS,Progress,0);
 	}
 
 	CloseHandle(hOutputFile);
@@ -108,6 +114,7 @@ BEGIN_MESSAGE_MAP(CDownloadManagerDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_START, &CDownloadManagerDlg::OnClickedStart)
+	ON_MESSAGE(WM_UPDATE_PROGRESS, &CDownloadManagerDlg::OnUpdateProgress)
 END_MESSAGE_MAP()
 
 
@@ -144,6 +151,8 @@ BOOL CDownloadManagerDlg::OnInitDialog()
 
 	// TODO: Add extra initialization here
 
+	m_progressBar.SetRange(0,100);
+	m_progressBar.SetPos(0);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -206,3 +215,14 @@ void CDownloadManagerDlg::OnClickedStart()
 		AfxBeginThread(DownloadFileThread, new CString(url));
 	}
 }
+LRESULT  CDownloadManagerDlg::OnUpdateProgress(WPARAM wParam, LPARAM lParam)
+{
+	int progress = (int)wParam;
+	m_progressBar.SetPos(progress);
+
+	CString progressText;
+	progressText.Format(L"%d%%",progress);
+	m_progressText.SetWindowText(progressText);
+	return 0;
+}
+
