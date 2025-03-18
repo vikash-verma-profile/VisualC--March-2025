@@ -85,6 +85,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication1Dlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_START_THREAD, &CMFCApplication1Dlg::OnClickedStartThread)
 	ON_BN_CLICKED(IDC_STOP_THREAD, &CMFCApplication1Dlg::OnClickedStopThread)
+	ON_MESSAGE(WM_UPDATE_STATUS, &CMFCApplication1Dlg::OnUpdateStatus)
 END_MESSAGE_MAP()
 
 
@@ -194,4 +195,11 @@ void CMFCApplication1Dlg::OnClickedStopThread()
 		m_pThread = nullptr;
 	}
 
+}
+
+LRESULT CMFCApplication1Dlg::OnUpdateStatus(WPARAM wParam,LPARAM lParam) {
+	CString* pStatus = (CString*)wParam;
+	SetDlgItemText(IDC_STATUS, *pStatus);
+	delete pStatus;//Free allocated memory;
+	return 0;
 }

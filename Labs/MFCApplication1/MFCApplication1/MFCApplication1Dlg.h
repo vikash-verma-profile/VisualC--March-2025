@@ -36,4 +36,5 @@ public:
 	bool m_bStopThread;
 	afx_msg void OnClickedStartThread();
 	afx_msg void OnClickedStopThread();
+	afx_msg LRESULT OnUpdateStatus(WPARAM wParam, LPARAM lParam);
 };
