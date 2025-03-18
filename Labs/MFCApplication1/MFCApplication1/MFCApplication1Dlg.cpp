@@ -60,7 +60,7 @@ UINT WorkerThreadFunction(LPVOID pParam) {
 		pDlg->PostMessage(WM_UPDATE_STATUS,(WPARAM)new CString(status));
 		Sleep(1000);
 
-		if (pDlg->) {
+		if (pDlg->m_bStopThread) {
 			break;
 		}
 	}
@@ -177,11 +177,21 @@ HCURSOR CMFCApplication1Dlg::OnQueryDragIcon()
 
 void CMFCApplication1Dlg::OnClickedStartThread()
 {
-	// TODO: Add your control notification handler code here
+	if (!m_pThread) {
+		m_bStopThread = false;
+		m_pThread = AfxBeginThread(WorkerThreadFunction,this);
+		SetDlgItemText(IDC_STATUS,L"Thread started....");
+	}
+
 }
 
 
 void CMFCApplication1Dlg::OnClickedStopThread()
 {
-	// TODO: Add your control notification handler code here
+	if (m_pThread) {
+		m_bStopThread = true;//signal to stop the thread
+		WaitForSingleObject(m_pThread->m_hThread,INFINITE);
+		m_pThread = nullptr;
+	}
+
 }
