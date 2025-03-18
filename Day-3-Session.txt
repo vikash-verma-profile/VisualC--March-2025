@@ -7,3 +7,11 @@ dll
 	-button=> to start the thread
 	-button=> to stop the thread
 	-static text==> display the thread status
+	
+	
+	create mult-threader download manager
+	Design
+	-Edit Control => for entering the file URL
+	-List COntrol => to show the status of downloads
+	-Button=> to start download
+	-Button=> stop download
