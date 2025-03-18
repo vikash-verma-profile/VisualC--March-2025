@@ -12,6 +12,7 @@
 #define new DEBUG_NEW
 #endif
 
+#define WM_UPDATE_STATUS (WM_USER+1)
 
 // CAboutDlg dialog used for App About
 
@@ -48,7 +49,24 @@ END_MESSAGE_MAP()
 
 // CMFCApplication1Dlg dialog
 
+UINT WorkerThreadFunction(LPVOID pParam) {
+	CMFCApplication1Dlg* pDlg = (CMFCApplication1Dlg*)pParam;
 
+	int counter = 0;
+
+	while (true) {
+		CString status;
+		status.Format(L"Processing...%d", counter++);
+		pDlg->PostMessage(WM_UPDATE_STATUS,(WPARAM)new CString(status));
+		Sleep(1000);
+
+		if (pDlg->) {
+			break;
+		}
+	}
+	pDlg->PostMessage(WM_UPDATE_STATUS, (WPARAM)new CString("Thread stopped"));
+	return 0;
+}
 
 CMFCApplication1Dlg::CMFCApplication1Dlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_MFCAPPLICATION1_DIALOG, pParent)
