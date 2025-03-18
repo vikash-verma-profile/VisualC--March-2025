@@ -1,0 +1,9 @@
+1.create a mfc and under that how we can introduce worker thread
+2.create mult-threader download manager
+
+dll
+
+-Design
+	-button=> to start the thread
+	-button=> to stop the thread
+	-static text==> display the thread status
