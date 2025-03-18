@@ -31,4 +31,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CWinThread* m_pThread;//Thread pointer
+	bool m_bStopThread;
+	afx_msg void OnClickedStartThread();
+	afx_msg void OnClickedStopThread();
 };

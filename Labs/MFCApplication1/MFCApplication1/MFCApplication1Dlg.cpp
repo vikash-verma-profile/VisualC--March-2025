@@ -83,6 +83,8 @@ BEGIN_MESSAGE_MAP(CMFCApplication1Dlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_START_THREAD, &CMFCApplication1Dlg::OnClickedStartThread)
+	ON_BN_CLICKED(IDC_STOP_THREAD, &CMFCApplication1Dlg::OnClickedStopThread)
 END_MESSAGE_MAP()
 
 
@@ -171,3 +173,15 @@ HCURSOR CMFCApplication1Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CMFCApplication1Dlg::OnClickedStartThread()
+{
+	// TODO: Add your control notification handler code here
+}
+
+
+void CMFCApplication1Dlg::OnClickedStopThread()
+{
+	// TODO: Add your control notification handler code here
+}
