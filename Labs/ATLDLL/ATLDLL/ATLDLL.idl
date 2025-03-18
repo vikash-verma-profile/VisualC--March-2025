@@ -1,0 +1,18 @@
+// ATLDLL.idl : IDL source for ATLDLL
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLDLL.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(a559496d-fd69-419d-b111-be9336eb42ba),
+	version(1.0),
+]
+library ATLDLLLib
+{
+	importlib("stdole2.tlb");
+};
+

@@ -1,0 +1,6 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+interface ICalculatorCom :Dispatch {
+	[id(1) HResult Add()]
+};
