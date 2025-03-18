@@ -14,6 +14,12 @@
 #endif
 
 #define WM_UPDATE_PROGRESS (WM_USER+1)
+
+struct DownloadParams {
+	CDownloadManagerDlg* pDlg;
+	CString url;
+};
+
 // CAboutDlg dialog used for App About
 
 class CAboutDlg : public CDialogEx
@@ -50,10 +56,21 @@ END_MESSAGE_MAP()
 // CDownloadManagerDlg dialog
 
 UINT DownloadFileThread(LPVOID pParam) {
-	CDownloadManagerDlg* pDlg = (CDownloadManagerDlg*)pParam;
-	CString* pUrl = (CString*)pParam;
-	int pos = pUrl->ReverseFind('/');
-	CString fileName = pUrl->Mid(pos + 1);
+	auto* pParams = (DownloadParams*)pParam;
+	CDownloadManagerDlg* pDlg = pParams->pDlg;
+
+	if (!pParams || !pParams->pDlg) {
+		return 0;  // Null check to prevent crashes
+	}
+	CString url = pParams->url;
+	delete pParams;  // Ensure memory is cleaned up properly
+
+	if (!::IsWindow(pDlg->GetSafeHwnd())) {
+		return 0;  // Dialog is already destroyed, exit thread safely
+	}
+
+	int pos = url.ReverseFind('/');
+	CString fileName = url.Mid(pos + 1);
 
 	HINTERNET hInternet = InternetOpen(L"DownloadManager", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
 	if (!hInternet) {
@@ -61,7 +78,7 @@ UINT DownloadFileThread(LPVOID pParam) {
 		return 0;
 	}
 
-	HINTERNET hFile = InternetOpenUrl(hInternet, *pUrl, NULL, 0, INTERNET_FLAG_RELOAD, 0);
+	HINTERNET hFile = InternetOpenUrl(hInternet, url, NULL, 0, INTERNET_FLAG_RELOAD, 0);
 	if (!hFile) {
 		AfxMessageBox(L"Failed to open URL.");
 		InternetCloseHandle(hInternet);
@@ -79,22 +96,32 @@ UINT DownloadFileThread(LPVOID pParam) {
 	char buffer[4096];
 	DWORD bytesRead = 0, bytesWritten = 0, totalRead = 0, filesize = 0;
 	DWORD sizelen = sizeof(filesize);
-	HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH, &filesize, &sizelen, NULL);
+	HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, &filesize, &sizelen, NULL);
 
 	while (InternetReadFile(hFile, buffer, sizeof(buffer), &bytesRead) && bytesRead > 0) {
 		WriteFile(hOutputFile, buffer, bytesRead, &bytesWritten, NULL);
 		totalRead += bytesRead;
 		int Progress = (int)((totalRead * 100) / filesize);
-		pDlg->PostMessage(WM_UPDATE_PROGRESS,Progress,0);
+
+		if (::IsWindow(pDlg->GetSafeHwnd())) {
+			pDlg->PostMessage(WM_UPDATE_PROGRESS, Progress, 0);
+		}
+		else {
+			break;  // Dialog was destroyed, stop the thread safely
+		}
 	}
 
 	CloseHandle(hOutputFile);
 	InternetCloseHandle(hFile);
 	InternetCloseHandle(hInternet);
 
-	AfxMessageBox(L"Download Completed: " + fileName);
+	if (::IsWindow(pDlg->GetSafeHwnd())) {
+		AfxMessageBox(L"Download Completed: " + fileName);
+	}
+
 	return 0;
 }
+
 
 
 
@@ -123,7 +150,9 @@ END_MESSAGE_MAP()
 BOOL CDownloadManagerDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
-
+	m_progressBar.SubclassDlgItem(IDC_PROGRESS_BAR,this);
+	m_progressBar.SetRange(0, 100);
+	m_progressBar.SetPos(0);
 	// Add "About..." menu item to system menu.
 
 	// IDM_ABOUTBOX must be in the system command range.
@@ -151,8 +180,7 @@ BOOL CDownloadManagerDlg::OnInitDialog()
 
 	// TODO: Add extra initialization here
 
-	m_progressBar.SetRange(0,100);
-	m_progressBar.SetPos(0);
+	
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -212,7 +240,8 @@ void CDownloadManagerDlg::OnClickedStart()
 	CString url;
 	GetDlgItemText(IDC_URL, url);
 	if (!url.IsEmpty()) {
-		AfxBeginThread(DownloadFileThread, new CString(url));
+		DownloadParams* pParams = new DownloadParams{ this, url };
+		AfxBeginThread(DownloadFileThread, pParams);
 	}
 }
 LRESULT  CDownloadManagerDlg::OnUpdateProgress(WPARAM wParam, LPARAM lParam)
@@ -220,9 +249,9 @@ LRESULT  CDownloadManagerDlg::OnUpdateProgress(WPARAM wParam, LPARAM lParam)
 	int progress = (int)wParam;
 	m_progressBar.SetPos(progress);
 
-	CString progressText;
-	progressText.Format(L"%d%%",progress);
-	m_progressText.SetWindowText(progressText);
+	//CString progressText;
+	//progressText.Format(L"%d%%",progress);
+	//m_progressText.SetWindowText(progressText);
 	return 0;
 }
 
