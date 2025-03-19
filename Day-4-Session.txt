@@ -30,4 +30,11 @@ Craete a com Server DLL that defines and implement IMyInterface
 create a client application that will use the com component that we have created
 
 
+ddb76e28-5eb7-4d2b-bd9d-eeb1450edb7e
+
+First 8 characters->data1:ddb76e28
+Next 4 chars=>5eb7->data2
+Next 4 chars=>4d2b->data3
+Next 16 chars(divided into 8 bytes)
+{}==> data4
 
