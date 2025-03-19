@@ -12,7 +12,7 @@ DEFINE_GUID(CLSID_MyComObject,
 interface IMyComObject : IDispatch {
    HRESULT ShowMessage(BSTR message);
 };
-
+[uuid("E44E93DD-D430-42D8-831A-892B632D3115")]
 class ATL_NO_VTABLE CMyComObject :
     public ATL::CComObjectRootEx<ATL::CComSingleThreadModel>,
     public ATL::CComCoClass<CMyComObject, &CLSID_MyComObject>,

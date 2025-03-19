@@ -7,6 +7,15 @@
 import "oaidl.idl";
 import "ocidl.idl";
 
+[uuid("06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A")]
+interface IMyComObject : IDispatch {
+	HRESULT ShowMessage(BSTR message);
+};
+[uuid("54CC700F-1759-4D48-B97C-F5DCC7B6675F")]
+coclass CMyComObject {
+	[default] interface IMyComObject;
+};
+
 [
 	uuid(6a3a67dd-1625-4637-b7df-8e55719f88cc),
 	version(1.0),

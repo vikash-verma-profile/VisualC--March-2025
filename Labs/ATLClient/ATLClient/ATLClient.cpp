@@ -10,7 +10,7 @@ int main()
 {
     CoInitialize(NULL);
     CComPtr<IMyComObject> pCOmObj;
-    HRESULT hr = pCOmObj.CoCreateInstance(__uuidof(CMyComObject));
+    HRESULT hr = pCOmObj.CoCreateInstance(CLSID_CMyComObject);
     if (SUCCEEDED(hr)) {
         pCOmObj->ShowMessage(CComBSTR(L"Hello from COM !!"));
     }
