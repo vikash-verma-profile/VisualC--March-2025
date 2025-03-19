@@ -38,3 +38,11 @@ Next 4 chars=>4d2b->data3
 Next 16 chars(divided into 8 bytes)
 {}==> data4
 
+
+ATL (Active template library)
+
+// {06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A}
+IMPLEMENT_OLECREATE(<<class>>, <<external_name>>, 
+0x6f0cfb7, 0x7715, 0x4886, 0xb8, 0xf7, 0xb, 0x2f, 0xb4, 0xcf, 0xc, 0x7a);
+
+
