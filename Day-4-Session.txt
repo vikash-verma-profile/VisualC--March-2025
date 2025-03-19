@@ -1,0 +1,33 @@
+COM=>(Component object Model)
+
+Com Architecture
+
+1.Encapsulation
+=> Objects expose functionality via intefaces rather than implementation details
+
+2.language independence
+=> Com objects can be created in one language and used in another
+3. Interoperability
+=> Com enables communication between softwarer components across differnet processes and machines
+4. Binary standard
+=>Unlike tradational header files, COM interfaces are defined in a binary format ensuring compatibility across compiliers
+
+COM INterface and class
+
+1.QueryInterface()=> used to obtain pointers to other interfaces
+2.AddRef()=> Increase the refence count of the object
+3.Release()=> Descrese the refernce count and destroys the object with no refernce 
+
+interface IMyInterface:public IUnkown{
+	virtual HRESULT STDMETHODCALLTYPE DOsomething=0;
+	
+}
+
+COM CLASSESS
+
+Lab
+Craete a com Server DLL that defines and implement IMyInterface
+create a client application that will use the com component that we have created
+
+
+
