@@ -30,10 +30,6 @@
 #error this stub requires an updated version of <rpcndr.h>
 #endif /* __RPCNDR_H_VERSION__ */
 
-#ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
-#endif /*COM_NO_WINDOWS_H*/
 
 #ifndef __MyATLProject_i_h__
 #define __MyATLProject_i_h__
@@ -80,6 +76,16 @@ extern "C" {
 #endif 
 
 
+
+#ifndef __MyATLProjectLib_LIBRARY_DEFINED__
+#define __MyATLProjectLib_LIBRARY_DEFINED__
+
+    /* library MyATLProjectLib */
+    /* [version][uuid] */
+
+
+    EXTERN_C const IID LIBID_MyATLProjectLib;
+
 #ifndef __IMyComObject_INTERFACE_DEFINED__
 #define __IMyComObject_INTERFACE_DEFINED__
 
@@ -96,7 +102,7 @@ extern "C" {
     {
     public:
         virtual HRESULT STDMETHODCALLTYPE ShowMessage(
-            BSTR message) = 0;
+            /* [in] */ BSTR message) = 0;
 
     };
 
@@ -166,7 +172,7 @@ extern "C" {
         DECLSPEC_XFGVIRT(IMyComObject, ShowMessage)
             HRESULT(STDMETHODCALLTYPE* ShowMessage)(
                 IMyComObject* This,
-                BSTR message);
+                /* [in] */ BSTR message);
 
         END_INTERFACE
     } IMyComObjectVtbl;
@@ -218,28 +224,16 @@ extern "C" {
 #endif 	/* __IMyComObject_INTERFACE_DEFINED__ */
 
 
+    EXTERN_C const CLSID CLSID_CMyComObject;
 
-#ifndef __MyATLProjectLib_LIBRARY_DEFINED__
-#define __MyATLProjectLib_LIBRARY_DEFINED__
+#ifdef __cplusplus
 
-    /* library MyATLProjectLib */
-    /* [version][uuid] */
-
-
-    EXTERN_C const IID LIBID_MyATLProjectLib;
+    class DECLSPEC_UUID("A5D3E3F6-89B9-4C5E-A56E-0D1F4C1DCC9E")
+        CMyComObject;
+#endif
 #endif /* __MyATLProjectLib_LIBRARY_DEFINED__ */
 
     /* Additional Prototypes for ALL interfaces */
-
-    unsigned long             __RPC_USER  BSTR_UserSize(unsigned long*, unsigned long, BSTR*);
-    unsigned char* __RPC_USER  BSTR_UserMarshal(unsigned long*, unsigned char*, BSTR*);
-    unsigned char* __RPC_USER  BSTR_UserUnmarshal(unsigned long*, unsigned char*, BSTR*);
-    void                      __RPC_USER  BSTR_UserFree(unsigned long*, BSTR*);
-
-    unsigned long             __RPC_USER  BSTR_UserSize64(unsigned long*, unsigned long, BSTR*);
-    unsigned char* __RPC_USER  BSTR_UserMarshal64(unsigned long*, unsigned char*, BSTR*);
-    unsigned char* __RPC_USER  BSTR_UserUnmarshal64(unsigned long*, unsigned char*, BSTR*);
-    void                      __RPC_USER  BSTR_UserFree64(unsigned long*, BSTR*);
 
     /* end of Additional Prototypes */
 

@@ -7,21 +7,27 @@
 import "oaidl.idl";
 import "ocidl.idl";
 
-[uuid("06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A")]
-interface IMyComObject : IDispatch {
-	HRESULT ShowMessage(BSTR message);
-};
-[uuid("54CC700F-1759-4D48-B97C-F5DCC7B6675F")]
-coclass CMyComObject {
-	[default] interface IMyComObject;
-};
-
 [
-	uuid(6a3a67dd-1625-4637-b7df-8e55719f88cc),
-	version(1.0),
+    uuid(6A3A67DD-1625-4637-B7DF-8E55719F88CC),  // Library UUID
+        version(1.0)
 ]
 library MyATLProjectLib
 {
-	importlib("stdole2.tlb");
-};
+    importlib("stdole2.tlb");
 
+    [
+        uuid(06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A) // Interface UUID
+    ]
+        interface IMyComObject : IDispatch
+    {
+        HRESULT ShowMessage([in] BSTR message);
+    };
+
+    [
+        uuid(A5D3E3F6-89B9-4C5E-A56E-0D1F4C1DCC9E) // CLSID for CMyComObject
+    ]
+        coclass CMyComObject
+    {
+        [default] interface IMyComObject;
+    };
+};

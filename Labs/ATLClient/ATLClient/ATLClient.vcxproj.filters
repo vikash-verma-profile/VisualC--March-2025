@@ -18,6 +18,9 @@
     <ClCompile Include="ATLClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyATLProject_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyATLProject_i.h">

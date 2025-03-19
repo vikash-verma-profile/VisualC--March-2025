@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ATLClient.cpp" />
+    <ClCompile Include="MyATLProject_i.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyATLProject_i.h" />
