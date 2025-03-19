@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyATLProject", "MyATLProject\MyATLProject.vcxproj", "{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyATLProjectPS", "MyATLProjectPS\MyATLProjectPS.vcxproj", "{6F49BFAE-D670-439E-BB57-241EEA0CCC21}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC} = {7C36999C-B0BB-46D3-B0B9-8070A8498AEC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Debug|x64.ActiveCfg = Debug|x64
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Debug|x64.Build.0 = Debug|x64
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Debug|x86.ActiveCfg = Debug|Win32
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Debug|x86.Build.0 = Debug|Win32
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Release|x64.ActiveCfg = Release|x64
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Release|x64.Build.0 = Release|x64
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Release|x86.ActiveCfg = Release|Win32
+		{7C36999C-B0BB-46D3-B0B9-8070A8498AEC}.Release|x86.Build.0 = Release|Win32
+		{6F49BFAE-D670-439E-BB57-241EEA0CCC21}.Debug|x64.ActiveCfg = Debug|x64
+		{6F49BFAE-D670-439E-BB57-241EEA0CCC21}.Debug|x86.ActiveCfg = Debug|Win32
+		{6F49BFAE-D670-439E-BB57-241EEA0CCC21}.Release|x64.ActiveCfg = Release|x64
+		{6F49BFAE-D670-439E-BB57-241EEA0CCC21}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B33BF890-E854-4690-A4CD-4844CA294039}
+	EndGlobalSection
+EndGlobal
