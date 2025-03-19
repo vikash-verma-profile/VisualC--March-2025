@@ -1,0 +1,18 @@
+// DEMOSNAPIN.idl : IDL source for DEMOSNAPIN
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DEMOSNAPIN.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(17902e7b-8799-44c1-8ef0-6f203d85cada),
+	version(1.0),
+]
+library DEMOSNAPINLib
+{
+	importlib("stdole2.tlb");
+};
+
