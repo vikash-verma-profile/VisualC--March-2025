@@ -4,8 +4,8 @@
 #include <objbase.h>
 
 using namespace std;
-static const IID CLSID_MyCOMObject = {
-
+static const CLSID CLSID_MyCOMObject = {
+0x824c14dc, 0x692, 0x4671, {0xb7, 0xe7, 0xa4, 0xae, 0xdf, 0xf8, 0x20, 0x3b }
 };
 __declspec(uuid("8ff62f5b-bde0-4ffc-8a3a-b501023a2884"))
 class MyComObject :public IMyInterface {
@@ -16,8 +16,8 @@ public:
 
 	}
 
-	HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid,void** ppvObject) override {
-		if (riid==IID_IUnknown || riid == IID_IMyInterface) {
+	HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppvObject) override {
+		if (riid == IID_IUnknown || riid == IID_IMyInterface) {
 			*ppvObject = static_cast<IMyInterface*>(this);
 			AddRef();
 			return S_OK;
@@ -45,10 +45,10 @@ public:
 
 //Factory function to create the com object
 
-extern "C" __declspec(dllexport) HRESULT CreateInstance(REFCLSID clsid,REFIID iid,void** ppv) {
+extern "C" __declspec(dllexport) HRESULT CreateInstance(REFCLSID clsid, REFIID iid, void** ppv) {
 	if (clsid == CLSID_MyCOMObject) {
 		MyComObject* obj = new MyComObject();
-		return obj->QueryInterface(iid,ppv);
+		return obj->QueryInterface(iid, ppv);
 	}
 
 	return E_NOINTERFACE;
