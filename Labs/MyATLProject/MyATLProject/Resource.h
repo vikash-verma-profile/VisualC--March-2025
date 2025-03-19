@@ -5,6 +5,8 @@
 
 #define IDS_PROJNAME                    100
 #define IDR_MYATLPROJECT      101
+#define IDR_MYCOMOBJECT 102
+
 
 // Next default values for new objects
 //

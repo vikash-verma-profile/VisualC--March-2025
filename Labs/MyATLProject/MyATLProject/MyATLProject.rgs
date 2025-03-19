@@ -1,3 +1,19 @@
 HKCR
 {
+    NoRemove CLSID
+    {
+        ForceRemove {06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A} = s 'MyComObject'
+        {
+            ProgID = s 'MyComObject.1'
+            VersionIndependentProgID = s 'MyComObject'
+            Description = s 'My COM Object'
+            AppID = s '{06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A}'
+            
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
+    }
 }
+
