@@ -23,5 +23,8 @@
     <ClInclude Include="IMyInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyCOMObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

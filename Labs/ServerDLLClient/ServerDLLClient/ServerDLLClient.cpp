@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include "IMyInterface.h"
+#include "MyCOMObject.h"
 
 using namespace std;
 
