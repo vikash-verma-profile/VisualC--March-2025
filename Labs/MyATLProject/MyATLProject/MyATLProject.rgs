@@ -2,12 +2,12 @@ HKCR
 {
     NoRemove CLSID
     {
-        ForceRemove {06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A} = s 'MyComObject'
+        ForceRemove {E44E93DD-D430-42D8-831A-892B632D3115} = s 'MyATLProject.CMyComObject'
         {
-            ProgID = s 'MyComObject.1'
-            VersionIndependentProgID = s 'MyComObject'
+            ProgID = s 'MyATLProject.CMyComObject.1'
+            VersionIndependentProgID = s 'MyATLProject.CMyComObject'
             Description = s 'My COM Object'
-            AppID = s '{06F0CFB7-7715-4886-B8F7-0B2FB4CF0C7A}'
+            AppID = s '{E44E93DD-D430-42D8-831A-892B632D3115}'
             
             InprocServer32 = s '%MODULE%'
             {

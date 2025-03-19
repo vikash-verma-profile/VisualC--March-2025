@@ -228,7 +228,7 @@ extern "C" {
 
 #ifdef __cplusplus
 
-    class DECLSPEC_UUID("A5D3E3F6-89B9-4C5E-A56E-0D1F4C1DCC9E")
+    class DECLSPEC_UUID("E44E93DD-D430-42D8-831A-892B632D3115")
         CMyComObject;
 #endif
 #endif /* __MyATLProjectLib_LIBRARY_DEFINED__ */

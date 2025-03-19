@@ -14,6 +14,9 @@ int main()
     if (SUCCEEDED(hr)) {
         pCOmObj->ShowMessage(CComBSTR(L"Hello from COM !!"));
     }
+    else {
+        cout << hr;
+    }
     CoUninitialize();
     return 0;
 }
