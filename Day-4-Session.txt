@@ -54,5 +54,30 @@ IMPLEMENT_OLECREATE(<<class>>, <<external_name>>,
 0xe44e93dd, 0xd430, 0x42d8, 0x83, 0x1a, 0x89, 0x2b, 0x63, 0x2d, 0x31, 0x15);
 
 
+WHAT IS MMC
+
+Microsoft management console
+
+
+Key Features under MMC
+1.Moduler Design
+2.Customiziable
+3.Centeralized management
+4. Support Remote management
+
+Layared Architecture of MMC
+1.Presentation layer (GUI)
+
+2.SNap-In Layer (Management Logic)
+
+3. MMC COre ENGINE (COM-Based Framework)
+
+
+IComponent==> manages view in mmc
+ICOmponentData=> manages snap-in structure and data
+IConsole=> provide access to console functions
+IConsole2=> extnds IConsole with additional methods
+IPropertySheetCallback==> Handles property pages for MMC objects
+
 
 
