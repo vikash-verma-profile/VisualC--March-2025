@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {3d35b2a1-fa75-4987-bdc6-51b6f8a3ae07} = s 'HelloSnapin class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{bbe6af48-5b9c-43b7-975a-458bd00d5d5a}'
+			Version = s '1.0'
+		}
+	}
+}
