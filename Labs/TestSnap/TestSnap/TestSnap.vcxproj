@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{95D41916-1CFD-4B89-8B44-7D6C1ED96A3B}</ProjectGuid>
+    <ProjectGuid>{7A08C6A1-D660-4708-A5F1-0F9F9C79D360}</ProjectGuid>
     <Keyword>AtlProj</Keyword>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -95,11 +95,11 @@
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>DemoSnap_i.h</HeaderFileName>
-      <InterfaceIdentifierFileName>DemoSnap_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>DemoSnap_p.c</ProxyFileName>
+      <HeaderFileName>TestSnap_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>TestSnap_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TestSnap_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)DemoSnap.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)TestSnap.tlb</TypeLibraryName>
       <DllDataFileName />
       <ValidateAllParameters>true</ValidateAllParameters>
     </Midl>
@@ -110,9 +110,8 @@
     </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\DemoSnap.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\TestSnap.def</ModuleDefinitionFile>
       <RegisterOutput>true</RegisterOutput>
-      <PerUserRedirection>true</PerUserRedirection>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -128,11 +127,11 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>DemoSnap_i.h</HeaderFileName>
-      <InterfaceIdentifierFileName>DemoSnap_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>DemoSnap_p.c</ProxyFileName>
+      <HeaderFileName>TestSnap_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>TestSnap_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TestSnap_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)DemoSnap.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)TestSnap.tlb</TypeLibraryName>
       <DllDataFileName />
       <ValidateAllParameters>true</ValidateAllParameters>
     </Midl>
@@ -143,7 +142,7 @@
     </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\DemoSnap.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\TestSnap.def</ModuleDefinitionFile>
       <RegisterOutput>true</RegisterOutput>
     </Link>
   </ItemDefinitionGroup>
@@ -160,11 +159,11 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>DemoSnap_i.h</HeaderFileName>
-      <InterfaceIdentifierFileName>DemoSnap_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>DemoSnap_p.c</ProxyFileName>
+      <HeaderFileName>TestSnap_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>TestSnap_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TestSnap_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)DemoSnap.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)TestSnap.tlb</TypeLibraryName>
       <DllDataFileName />
       <ValidateAllParameters>true</ValidateAllParameters>
     </Midl>
@@ -175,7 +174,7 @@
     </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\DemoSnap.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\TestSnap.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <RegisterOutput>true</RegisterOutput>
@@ -193,11 +192,11 @@
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <HeaderFileName>DemoSnap_i.h</HeaderFileName>
-      <InterfaceIdentifierFileName>DemoSnap_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>DemoSnap_p.c</ProxyFileName>
+      <HeaderFileName>TestSnap_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName>TestSnap_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>TestSnap_p.c</ProxyFileName>
       <GenerateStublessProxies>true</GenerateStublessProxies>
-      <TypeLibraryName>$(IntDir)DemoSnap.tlb</TypeLibraryName>
+      <TypeLibraryName>$(IntDir)TestSnap.tlb</TypeLibraryName>
       <DllDataFileName />
       <ValidateAllParameters>true</ValidateAllParameters>
     </Midl>
@@ -208,37 +207,23 @@
     </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\DemoSnap.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\TestSnap.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <RegisterOutput>true</RegisterOutput>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DemoSnap_i.h" />
+    <ClInclude Include="ATLSimpleObject.h" />
     <ClInclude Include="dllmain.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="HelloSnapin.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TestSnap_i.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DemoSnap.cpp" />
-    <ClCompile Include="DemoSnap_i.c">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="ATLSimpleObject.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
@@ -253,24 +238,38 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="HelloSnapin.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TestSnap.cpp" />
+    <ClCompile Include="TestSnap_i.c">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="DemoSnap.rc" />
+    <ResourceCompile Include="TestSnap.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DemoSnap.def" />
-    <None Include="DemoSnap.rgs" />
-    <None Include="HelloSnapin.rgs" />
+    <None Include="ATLSimpleObject.rgs" />
+    <None Include="TestSnap.def" />
+    <None Include="TestSnap.rgs" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="DemoSnap.idl" />
+    <Midl Include="TestSnap.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
